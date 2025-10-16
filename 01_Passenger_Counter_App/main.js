@@ -1,24 +1,23 @@
-// selecting the html element by their 'id' attribute
+// DOM elements for counter display and save history
 let countEl = document.getElementById('count-el');
-let saveEl = document.getElementById('save-el')
+let saveEl = document.getElementById('save-el');
 
-// initializing a variable to 0
+// Current count value
 let count = 0;
 
-// defining increment function (this function increases the count value by 1)
+// Increments counter and updates display
 function increment() {
     count += 1;
     countEl.innerText = count;
 }
 
-// defining reset count function (this function will reset the count value to 0)
+// Resets counter to zero
 function resetCount() {
     count = 0;
     countEl.textContent = count;
 }
 
-// defining save function 
-// (this function will save the current session count value and display in an html element selected by 'id')
+// Saves current count to history and resets counter
 function save() {
     let countStr = count + " - ";
     saveEl.textContent += countStr;
